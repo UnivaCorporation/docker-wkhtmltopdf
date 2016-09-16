@@ -17,5 +17,5 @@ RUN apt-get update -qq \
 
 ENTRYPOINT ["wkhtmltopdf"]
 
-# Show the extended help
+# Show the extended help (not necessary)
 CMD ["-h"]
