@@ -8,7 +8,7 @@ ENV WKHTMLTOPDF wkhtmltox_0.12.6-0.20180618.3.dev.e6d6f54.stretch_amd64.deb
 ENV WKHTMLTOPDF_URL https://builds.wkhtmltopdf.org/0.12.6-dev/$WKHTMLTOPDF
 RUN apt-get update -qq \
   && apt-get install --no-install-recommends -yq $BUILD_PACKAGES $MAIN_PACKAGES \
-  && wget --quiet --no-check-certificate $WKHTMLTOPDF_URL
+  && wget --quiet --no-check-certificate $WKHTMLTOPDF_URL \
   && dpkg -i $WKHTMLTOPDF \
   && rm $WKHTMLTOPDF \
   && apt-get remove -y $BUILD_PACKAGES \
