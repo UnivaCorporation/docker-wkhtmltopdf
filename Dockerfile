@@ -16,6 +16,4 @@ RUN apt-get update -qq \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && truncate -s 0 /var/log/*log
-ENTRYPOINT ["wkhtmltopdf"]
-# Show the extended help by default
-CMD ["-H"]
+CMD ["wkhtmltopdf"]
